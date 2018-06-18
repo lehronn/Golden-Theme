@@ -1,49 +1,203 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
+* {
+  outline: 0px solid red;
 }
 
 body {
-  line-height: 1;
+  margin: 0;
+  background: #212121;
+  font-family: "Roboto", sans-serif;
 }
 
-ol, ul {
-  list-style: none;
+.container_fluid {
+  width: 100%;
+  margin: 0 auto;
 }
 
-blockquote, q {
-  quotes: none;
+.container {
+  width: 940px;
+  margin: 0 auto;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
+.button {
+  background: #FDD135;
+  border: 0;
+  padding: 20px 35px;
+  color: #FFF;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 5px;
+  font-size: 1.2rem;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+.background__fluid {
+  background: url("./assets/header.jpg") #212121 no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 700px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 700px;
+  background: #212121;
+  opacity: 0.3;
+  transition: .5s opacity ease-in-out;
+}
+
+.overlay:hover {
+  opacity: 0;
+}
+
+.header {
+  height: 700px;
+  color: #FFF;
+  text-align: center;
+  position: relative;
+}
+
+.nav {
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  height: 50px;
+}
+
+.logo {
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  float: left;
+}
+
+.header__content {
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header__content .header__title {
+  display: block;
+  margin: auto;
+  font-family: "Open Sans", sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 40px;
+}
+
+.header__content .header__subtitle {
+  display: block;
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5rem;
+  margin: 40px;
+}
+
+.menu {
+  float: left;
+  position: absolute;
+  right: 5%;
+}
+
+.menu .menu__item {
+  display: inline;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #FFF;
+  padding-right: 20px;
+}
+
+.menu .menu__link {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.section__header, .section__title_dark .section__header {
+  color: #212121;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.8rem;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  padding: 25px;
+}
+
+.section__subheader, .section__title_dark .section__subheader {
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  display: block;
+  color: #212121;
+  opacity: 0.3;
+  font-size: 1.1rem;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+}
+
+.section__title_dark .section__header {
+  color: #FFF;
+}
+
+.section__title_dark .section__subheader {
+  color: #FFF;
+}
+
+.footer {
+  color: #FFF;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.services {
+  background: #FFF;
+  min-height: 430px;
+}
+
+.items .section__item {
+  width: 33%;
+  text-align: center;
+  float: left;
+}
+
+.items .item__desc {
+  padding: 10px;
+}
+
+.item__icon {
+  width: 74px;
+  height: 73px;
+  margin: 30px auto;
+  transition: 0.5s transform ease-in-out;
+}
+
+.item__icon:hover {
+  transform: rotate(25deg);
+}
+
+.portfolio {
+  background: #F7F7F7;
+}
+
+.aboutus {
+  background: #FFF;
+}
+
+.team {
+  background: #F7F7F7;
+}
+
+.partners {
+  background: #FFF;
+}
+
+.contact {
+  height: 620px;
+  background: url(./assets/contact_bg.jpg) no-repeat 50% 10% #212121;
 }
 /*# sourceMappingURL=styles.css.map */

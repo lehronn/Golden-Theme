@@ -1,46 +1,294 @@
-// reset css 2.0 | thanks Eric Meyer
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+// variables
+$head-font: 'Open Sans', sans-serif;
+$body-font: 'Roboto', sans-serif;
+$light: #FFF;
+$blue-light: #F7F7F7;
+$semi-dark: #212121;
+$attent: #FDD135; // styles
+
+* {
+  outline: 0 solid red;
 }
 
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
 body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  margin: 0;
+  background: #212121;
+  font-family: $body-font;
 }
 
-// styles
+.container_fluid {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.button {
+  background: $attent;
+  border: 0;
+  padding: 20px 35px;
+  color: $light;
+  font-family: $head-font;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+// header
+
+.background__fluid {
+  background: url("./assets/header.jpg") $semi-dark no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 700px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 700px;
+  background: $semi-dark;
+  opacity: 0.3;
+  transition: 0.5s opacity ease-in-out;
+}
+
+.overlay:hover {
+  opacity: 0;
+}
+
+.header {
+  height: 700px;
+  color: $light;
+  text-align: center;
+  position: relative;
+}
+
+.nav {
+  position: relative;
+  font-family: $head-font;
+  height: 50px;
+}
+
+.logo {
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  float: left;
+}
+
+.header__content {
+  display: block;
+  position: absolute;
+  width: 100%; // centering content XY
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); // end centering content XY
+
+  .header__title {
+    display: block;
+    margin: auto;
+    font-family: $head-font;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 40px;
+  }
+
+  .header__subtitle {
+    display: block;
+    margin: auto;
+    font-family: $body-font;
+    font-size: 2.5rem;
+    margin: 40px;
+  }
+}
+
+.menu {
+  float: left;
+  position: absolute;
+  right: 5%;
+
+  .menu__item {
+    display: inline;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $light;
+    padding-right: 20px;
+  }
+
+  .menu__link {
+    color: $light;
+    text-decoration: none;
+  }
+}
+// sections, main content
+
+.main {}
+
+.section {}
+
+.section__header {
+  color: $semi-dark;
+  font-family: $head-font;
+  font-size: 1.8rem;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  padding: 25px;
+}
+
+.section__subheader {
+  font-family: $body-font;
+  font-style: italic;
+  font-weight: 300;
+  display: block;
+  color: $semi-dark;
+  opacity: 0.3;
+  font-size: 1.1rem;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+}
+
+.section__text-block {}
+
+.section__title_dark {
+  .section__header {
+    @extend .section__header;
+    color: $light;
+  }
+
+  .section__subheader {
+    @extend .section__subheader;
+    color: $light;
+  }
+}
+// footer
+
+.footer {
+  color: $light;
+  font-family: $body-font;
+  font-weight: 300;
+  font-size: 0.9rem;
+
+  .footer__icons {}
+}
+// icons
+
+.icon_light {}
+
+.icon_dark {}
+// services section
+
+.services {
+  background: $light;
+  min-height: 430px;
+}
+
+.items {
+  .section__item {
+    width: 33%;
+    text-align: center;
+    float: left;
+  }
+
+  .item__desc {
+    padding: 10px;
+  }
+}
+
+.item__icon {
+  width: 74px;
+  height: 73px;
+  margin: 30px auto;
+  transition: 0.5s transform ease-in-out;
+
+  &:hover {
+    transform: rotate(25deg);
+  }
+}
+// portfolio section
+
+.portfolio {
+  background: $blue-light;
+}
+
+.gallery {
+  .gallery__row {
+    .gallery__item {
+      .item__image {}
+
+      .item__title {}
+
+      .item__desc {}
+    }
+  }
+}
+// about us section
+
+.aboutus {
+  background: $light;
+}
+
+.time-line {
+  .time-line_item {
+    .time-line__content-left {}
+
+    .time-line__content-right {}
+  }
+
+  .time-line__date {}
+
+  .time-line__title {}
+
+  .time-line__desc {}
+
+  .time-line__image {}
+}
+// team section
+
+.team {
+  background: $blue-light;
+}
+
+.cards {
+  .cards__item {}
+
+  .cards_image {}
+
+  .cards__name {}
+
+  .cards__position {}
+
+  .cards__icons {}
+}
+// partners section
+
+.partners {
+  background: $light;
+
+  .partners__items {
+    .partners__item {}
+  }
+}
+// contact section
+
+.contact {
+  height: 620px;
+  background: url("./assets/contact_bg.jpg") no-repeat 50% 10% $semi-dark;
+}
+
+.contact-form {
+  .contact-form__name {}
+
+  .contact-form__email {}
+
+  .contact-form__subject {}
+
+  .contact-form__message {}
+
+  .contact-form__submit {}
+}
