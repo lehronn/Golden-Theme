@@ -1,15 +1,15 @@
 * {
-  outline: 0px solid red;
+  outline: 0 solid red;
 }
 
 body {
   margin: 0;
-  background: #212121;
+  background: #FFF;
   font-family: "Roboto", sans-serif;
 }
 
 .container_fluid {
-  width: 100%;
+  width: 1400px;
   margin: 0 auto;
 }
 
@@ -38,12 +38,11 @@ body {
 .overlay {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  width: 1400px;
   height: 700px;
   background: #212121;
   opacity: 0.3;
-  transition: .5s opacity ease-in-out;
+  transition: 0.5s opacity ease-in-out;
 }
 
 .overlay:hover {
@@ -61,12 +60,13 @@ body {
   position: relative;
   font-family: "Open Sans", sans-serif;
   height: 50px;
+  padding-top: 25px;
 }
 
 .logo {
   position: absolute;
-  top: 25%;
   left: 5%;
+  padding-top: 15px;
   float: left;
 }
 
@@ -115,6 +115,10 @@ body {
   text-decoration: none;
 }
 
+.section {
+  padding: 35px 0;
+}
+
 .section__header, .section__title_dark .section__header {
   color: #212121;
   font-family: "Open Sans", sans-serif;
@@ -123,7 +127,7 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
-  padding: 25px;
+  padding: 0 25px 25px 25px;
 }
 
 .section__subheader, .section__title_dark .section__subheader {
@@ -139,6 +143,11 @@ body {
   padding: 10px;
 }
 
+.section__text-block {
+  text-align: center;
+  padding: 50px;
+}
+
 .section__title_dark .section__header {
   color: #FFF;
 }
@@ -148,10 +157,35 @@ body {
 }
 
 .footer {
-  color: #FFF;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 0.9rem;
+}
+
+.footer .footer__content {
+  transform: translatex(-100px);
+  text-align: center;
+}
+
+.footer .footer__content span {
+  margin-right: 35px;
+}
+
+.footer .footer__content i {
+  border: 2px #212121 solid;
+  border-radius: 50%;
+  line-height: 1rem;
+  text-align: center;
+  margin: 10px 3px;
+  padding: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+.icon_dark {
+  color: #FFF;
+  background: #212121;
 }
 
 .services {
@@ -188,16 +222,119 @@ body {
   background: #FFF;
 }
 
+.time-line {
+  position: relative;
+  padding: 35px;
+}
+
+.time-line .time-line__item {
+  margin: 0 auto;
+  height: 300px;
+}
+
+.time-line .time-line__item .time-line__content_left {
+  width: 300px;
+  position: relative;
+  left: 40px;
+  text-align: right;
+}
+
+.time-line .time-line__item .time-line__content_right {
+  width: 300px;
+  position: relative;
+  left: 610px;
+}
+
+.time-line .time-line__gray-line {
+  background: #F1F1F1;
+  width: 3px;
+  height: 1115px;
+  position: absolute;
+  left: 50%;
+  top: 200px;
+}
+
+.time-line .time-line__image {
+  position: relative;
+  top: -180px;
+  width: 170px;
+  height: 170px;
+  border: 5px #F1F1F1 solid;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.time-line .time-line__item_see-more {
+  background: #FDD135;
+  width: 170px;
+  height: 170px;
+  border: 5px #F1F1F1 solid;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.time-line .time-line__item_see-more .time-line__content {
+  color: #FFF;
+  font-family: "Roboto", sans-serif;
+  line-height: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  transform: translatey(35%);
+}
+
 .team {
   background: #F7F7F7;
+}
+
+.cards {
+  max-width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: 50px;
+  text-align: center;
+}
+
+.cards .cards__image {
+  margin: 25px;
+  width: 220px;
+  height: 220px;
+  border: 4px #FFF solid;
+  border-radius: 50%;
+}
+
+.cards .cards__icons i {
+  border: 2px #212121 solid;
+  border-radius: 50%;
+  line-height: 1rem;
+  text-align: center;
+  margin: 10px 3px;
+  padding: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
 }
 
 .partners {
   background: #FFF;
 }
 
+.partners .partners__items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partners .partners__items .partners__item {
+  width: 190px;
+  height: 44px;
+  cursor: pointer;
+}
+
 .contact {
   height: 620px;
-  background: url(./assets/contact_bg.jpg) no-repeat 50% 10% #212121;
+  background: url("./assets/contact_bg.jpg") no-repeat 50% 10% #212121;
 }
 /*# sourceMappingURL=styles.css.map */
