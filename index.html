@@ -49,8 +49,8 @@
   </div>
   <!-- main content -->
   <main class="main">
-      <div class="container">
-        <section class="section services">
+    <div class="container_fluid">
+    <section class="container section services">
           <div class="section__title">
             <h2 class="section__header">Services</h2>
             <span class="section__subheader">Proin iaculis purus consequat sem cure.</span>
@@ -83,41 +83,49 @@
             <span class="section__subheader">Proin iaculis purus consequat sem cure.</span>
           </div>
           <div class="gallery">
-            <div class="gallery__row">
               <div class="gallery__item">
-                <div class="item__image"></div>
-                <h3 class="item__title">Ebony & Ivory</h3>
-                <span class="item__desc">Branding</span>
+                <div class="item__image" style="background: url('./assets/gallery0.jpg') center center"></div>
+                <div class="item__content">
+                  <h3 class="item__title">Ebony & Ivory</h3>
+                  <span class="item__desc">Branding</span>
+                </div>
               </div>
               <div class="gallery__item">
-                <div class="item__image"></div>
-                <h3 class="item__title">Smart Stationary</h3>
-                <span class="item__desc">Print Design</span>
+                <div class="item__image" style="background: url('./assets/gallery1.jpg') center center"></div>
+                <div class="item__content">
+                    <h3 class="item__title">Smart Stationary</h3>
+                    <span class="item__desc">Print Design</span>
+                  </div>
               </div>
               <div class="gallery__item">
-                <div class="item__image"></div>
-                <h3 class="item__title">Clever Poster</h3>
-                <span class="item__desc">Print Design</span>
+                <div class="item__image" style="background: url('./assets/gallery2.jpg') center center"></div>
+                <div class="item__content">
+                    <h3 class="item__title">Clever Poster</h3>
+                    <span class="item__desc">Print Design</span>
+                  </div>
               </div>
-            </div>
   
-            <div class="gallery__row">
               <div class="gallery__item">
-                <div class="item__image"></div>
-                <h3 class="item__title">Ebony & Ivory</h3>
-                <span class="item__desc">Branding</span>
+                <div class="item__image" style="background: url('./assets/gallery3.jpg') center center"></div>
+                <div class="item__content">
+                    <h3 class="item__title">VyRecord</h3>
+                    <span class="item__desc">Product Mockup</span>
+                  </div>
               </div>
               <div class="gallery__item">
-                <div class="item__image"></div>
-                <h3 class="item__title">Smart Stationary</h3>
-                <span class="item__desc">Print Design</span>
+                <div class="item__image" style="background: url('./assets/gallery4.jpg') center center"></div>
+                <div class="item__content">
+                    <h3 class="item__title">TreeHouse Template</h3>
+                    <span class="item__desc">Web Design</span>
+                  </div>
               </div>
               <div class="gallery__item">
-                <div class="item__image"></div>
-                <h3 class="item__title">Clever Poster</h3>
-                <span class="item__desc">Print Design</span>
+                <div class="item__image" style="background: url('./assets/gallery5.jpg') center center"></div>
+                <div class="item__content">
+                    <h3 class="item__title">Burned Logo</h3>
+                    <span class="item__desc">Branding</span>
+                  </div>
               </div>
-            </div>
           </div>
         </section>
       </div>
@@ -242,13 +250,23 @@
       </div>
 
       <div class="contact-form">
-        <input class="contact-form__name"></input>
-        <input class="contact-form__email"></input>
-        <input class="contact-form__subject"></input>
-        <textarea class="contact-form__message"></textarea>
-        <button class="contact-form__submit button" type="submit">
-          Send message
-        </button>
+        <div class="contact-form__form-container_row">
+          <div class="contact-form_left">
+              <input class="contact-form__name" value="YOUR NAME"></input>
+              <input class="contact-form__email" value="YOUR EMAIL"></input>
+              <input class="contact-form__subject" value="EMAIL SUBJECT"></input>
+            </div>
+            <div class="contact-form_right">
+              <textarea class="contact-form__message">YOUR MESSAGE...</textarea>
+            </div>
+        </div>
+        <div class="contact-form__form-container_column">
+          <div class="contact-form_bottom">
+              <button class="contact-form__submit button" type="submit">
+                Send message
+              </button>
+            </div>
+        </div>
       </div>
     </section>
   </div>
