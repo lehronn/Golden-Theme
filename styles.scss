@@ -350,17 +350,18 @@ body {
   .time-line__item {
     margin: 0 auto;
     height: 300px;
+    transition: all 1s ease-in-out;
     .time-line__content_left {
       width: 300px;
       position: relative;
-      left: 40px;
+      left: 0;
       text-align: right;
     }
 
     .time-line__content_right {
       width: 300px;
       position: relative;
-      left: 610px;
+      left: 600px;
     }
   }
 
