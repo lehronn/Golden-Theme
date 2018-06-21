@@ -22,11 +22,29 @@
   }
 
   .menu-hamburger {
-
+    z-index: 3;
   }
 
   .menu {
-    display: none;
+    z-index: 2;
+    float: none;
+    position: relative;
+    top: -350px;
+    left: 0;
+    background: $semi-dark;
+    transition: all 1s ease-in-out;
+  
+    .menu__item {
+      display: block;
+      padding: 20px;
+    }
+  
+    .menu__link {
+    }
+  }
+
+  .menu_active {
+    top: -41px;
   }
 
 // footer

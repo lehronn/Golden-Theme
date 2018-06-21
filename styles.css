@@ -140,6 +140,24 @@ body {
   margin-right: 0;
 }
 
+#menu-hamburger.hamburger_active .hamburger__line:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-hamburger.hamburger_active .hamburger__line:nth-child(1) {
+  -webkit-transform: translateY(13px) rotate(45deg);
+  -ms-transform: translateY(13px) rotate(45deg);
+  -o-transform: translateY(13px) rotate(45deg);
+  transform: translateY(13px) rotate(45deg);
+}
+
+#menu-hamburger.hamburger_active .hamburger__line:nth-child(3) {
+  -webkit-transform: translateY(-13px) rotate(-45deg);
+  -ms-transform: translateY(-13px) rotate(-45deg);
+  -o-transform: translateY(-13px) rotate(-45deg);
+  transform: translateY(-13px) rotate(-45deg);
+}
+
 .menu {
   float: left;
   position: absolute;
@@ -539,8 +557,24 @@ body {
   .overlay {
     display: none;
   }
+  .menu-hamburger {
+    z-index: 3;
+  }
   .menu {
-    display: none;
+    z-index: 2;
+    float: none;
+    position: relative;
+    top: -350px;
+    left: 0;
+    background: #212121;
+    transition: all 1s ease-in-out;
+  }
+  .menu .menu__item {
+    display: block;
+    padding: 20px;
+  }
+  .menu_active {
+    top: -41px;
   }
   .footer .footer__content {
     transform: none;
