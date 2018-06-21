@@ -6,6 +6,7 @@ body {
   margin: 0;
   background: #FFF;
   font-family: "Roboto", sans-serif;
+  font-size: 16px;
 }
 
 .container_fluid {
@@ -73,6 +74,7 @@ body {
   color: #FFF;
   text-align: center;
   position: relative;
+  pointer-events: none;
 }
 
 .nav {
@@ -80,6 +82,7 @@ body {
   font-family: "Open Sans", sans-serif;
   height: 50px;
   padding-top: 25px;
+  pointer-events: auto;
 }
 
 .logo {
@@ -113,6 +116,28 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 2.5rem;
   margin: 40px;
+}
+
+.header__content .header__button {
+  pointer-events: auto;
+}
+
+.menu-hamburger {
+  width: 50px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  padding: 0 35px;
+}
+
+.hamburger__line {
+  width: 50px;
+  height: 5px;
+  background: #FFF;
+  display: block;
+  margin: 8px auto;
+  transition: all 0.3s ease-in-out;
+  margin-right: 0;
 }
 
 .menu {
@@ -167,11 +192,6 @@ body {
   padding: 10px;
 }
 
-.section__text-block {
-  text-align: center;
-  padding: 50px;
-}
-
 .section__title_dark .section__header {
   color: #FFF;
 }
@@ -187,15 +207,18 @@ body {
 }
 
 .footer .footer__content {
-  transform: translatex(-100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
 .footer .footer__content span {
-  margin-right: 35px;
+  display: block;
+  margin: 15px;
 }
 
-.footer .footer__content i {
+.footer .footer__content .footer__icons i {
   border: 2px #212121 solid;
   border-radius: 50%;
   line-height: 1rem;
@@ -275,14 +298,17 @@ body {
 }
 
 .gallery .gallery__item .item__image {
+  flex-basis: 290px;
   width: 290px;
   height: 300px;
+  margin: auto;
 }
 
 .gallery .gallery__item .item__content {
-  background: #FFF;
+  flex-basis: 290px;
   width: 290px;
   padding: 10px 0;
+  margin: auto;
 }
 
 .gallery__item:hover {
@@ -362,9 +388,13 @@ body {
   background: #F7F7F7;
 }
 
+.section__text {
+  text-align: center;
+  padding: 20px;
+}
+
 .cards {
   max-width: 100%;
-  height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -400,7 +430,6 @@ body {
 
 .partners {
   background: #FFF;
-  padding-bottom: 0;
 }
 
 .partners .partners__items {
@@ -491,5 +520,124 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
+}
+
+@media screen and (min-width: 991px) {
+  .menu-hamburger {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .container_fluid {
+    width: 100%;
+  }
+  .container {
+    width: 100%;
+  }
+  .overlay {
+    display: none;
+  }
+  .menu {
+    display: none;
+  }
+  .footer .footer__content {
+    transform: none;
+  }
+  .footer .footer__content span {
+    display: block;
+    padding: 20px;
+    margin: 0;
+  }
+  .items {
+    display: block;
+  }
+  .items .section__item .item__desc {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  .aboutus {
+    display: none;
+  }
+  .section__text {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .cards {
+    display: block;
+  }
+  .cards .cards__item {
+    margin: 50px;
+  }
+  .cards .cards__item .cards__image {
+    margin: 0 auto;
+  }
+  .partners .partners__items {
+    display: block;
+  }
+  .partners .partners__items .partners__item {
+    margin: 0 auto;
+    padding: 25px;
+  }
+  .contact-form {
+    margin-top: 5px;
+  }
+  .contact-form .contact-form__form-container_row {
+    display: block;
+  }
+  .contact-form .contact-form__form-container_row .contact-form_left .contact-form__name {
+    width: 400px;
+  }
+  .contact-form .contact-form__form-container_row .contact-form_left .contact-form__email {
+    width: 400px;
+  }
+  .contact-form .contact-form__form-container_row .contact-form_left .contact-form__subject {
+    width: 400px;
+  }
+  .contact-form .contact-form__form-container_row .contact-form_right .contact-form__message {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .footer .footer__content {
+    display: block;
+  }
+  .section__header, .section__title_dark .section__header {
+    padding: 0;
+  }
+  .cards {
+    display: block;
+  }
+  .cards .cards__item {
+    margin: 50px;
+  }
+  .cards .cards__item .cards__image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+  .contact-form {
+    margin-top: 20px;
+  }
+  .contact-form .contact-form__form-container_row {
+    display: block;
+  }
+  .contact-form .contact-form__form-container_row .contact-form_left .contact-form__name {
+    width: 290px;
+    margin: 15px 0;
+  }
+  .contact-form .contact-form__form-container_row .contact-form_left .contact-form__email {
+    width: 290px;
+    margin: 15px 0;
+  }
+  .contact-form .contact-form__form-container_row .contact-form_left .contact-form__subject {
+    width: 290px;
+    margin: 15px 0;
+  }
+  .contact-form .contact-form__form-container_row .contact-form_right .contact-form__message {
+    width: 290px;
+    margin: 15px 0;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

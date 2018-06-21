@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Golden Theme</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400i,700|Roboto:300,400&amp;subset=latin-ext" rel="stylesheet">
   <link rel="Stylesheet" type="text/css" href="styles.css" />
@@ -21,6 +21,11 @@
           <a class="logo" href="./">
             <img src="./assets/logo.png" alt="Golden Theme">
           </a>
+          <div class="menu-hamburger" id="menu-hamburger">
+            <span class="hamburger__line"></span>
+            <span class="hamburger__line"></span>
+            <span class="hamburger__line"></span>
+          </div>
           <ul class="menu">
             <li class="menu__item">
               <a href="#" class="menu__link">Home</a>
@@ -181,7 +186,7 @@
               </div>
             </div>
           </div>
-        </section
+        </section>
       </div>
 
       <!-- team section -->
@@ -224,21 +229,25 @@
               </div>
             </div>
           </div>
-          <p class="section__text-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur eum esse aspernatur natus laboriosam optio! Impedit ipsum mollitia praesentium optio reprehenderit odit dolor quasi perferendis! Molestiae nam pariatur officia magni.
-          </p>
+          <div class="section__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur eum esse aspernatur natus laboriosam optio! Impedit ipsum mollitia praesentium optio reprehenderit odit dolor quasi perferendis! Molestiae pariatur officia.
+          </div>
 
         </div>
       </section>
 
       <!-- partners section -->
-      <section class="section partners">
-        <div class="partners__items">
-          <div class="partners__item" style="background: url('./assets/brand0.png') no-repeat center center;"></div>
-          <div class="partners__item" style="background: url('./assets/brand1.png') no-repeat center center;"></div>
-          <div class="partners__item" style="background: url('./assets/brand2.png') no-repeat center center;"></div>
-          <div class="partners__item" style="background: url('./assets/brand3.png') no-repeat center center;"></div>
+      <section class="section partners container_fluid">
+        <div class="container">
+          <div class="partners__items">
+              <div class="partners__item" style="background: url('./assets/brand0.png') no-repeat center center;"></div>
+              <div class="partners__item" style="background: url('./assets/brand1.png') no-repeat center center;"></div>
+              <div class="partners__item" style="background: url('./assets/brand2.png') no-repeat center center;"></div>
+              <div class="partners__item" style="background: url('./assets/brand3.png') no-repeat center center;"></div>
+          </div>
         </div>
       </section>
+    
     </main>
   </div>
   <!-- contact section -->
@@ -261,7 +270,7 @@
             </div>
         </div>
         <div class="contact-form__form-container_column">
-          <div class="contact-form_bottom">
+          <div class="contact-form__bottom">
               <button class="contact-form__submit button" type="submit">
                 Send message
               </button>
@@ -275,10 +284,12 @@
     <footer class="footer container_fluid">
       <div class="footer__content container">
         <span>Copyright 2018 Loresipso.com</span>
-        <i class="fab fa-facebook-f icon_dark"></i>
-        <i class="fab fa-twitter icon_dark"></i>
-        <i class="fab fa-google-plus-g icon_dark"></i>
-        <i class="fab fa-pinterest-p icon_dark"></i>
+        <div class="footer__icons">
+          <i class="fab fa-facebook-f icon_dark"></i>
+          <i class="fab fa-twitter icon_dark"></i>
+          <i class="fab fa-google-plus-g icon_dark"></i>
+          <i class="fab fa-pinterest-p icon_dark"></i>
+        </div>
       </div>
     </footer>
   </div>

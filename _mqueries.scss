@@ -1,0 +1,189 @@
+// mqueries.scss
+
+// media queries
+@media screen and (min-width: 991px) {
+  .menu-hamburger {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .container_fluid {
+    width: 100%;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+// header section
+  .overlay {
+    display: none;
+  }
+
+  .menu-hamburger {
+
+  }
+
+  .menu {
+    display: none;
+  }
+
+// footer
+.footer {
+
+  .footer__content {
+    transform: none;
+    span {
+      display: block;
+      padding: 20px;
+      margin: 0;
+    }
+    i {
+
+    }
+  }
+}
+
+// services section
+  .items {
+    display: block;
+    .section__item {
+      .item__desc {
+        margin-left: 20%;
+        margin-right: 20%;
+      }
+    }
+  }
+
+// aboutus section
+  .aboutus {
+    display: none;
+  }
+
+// team section
+  .section__text {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .cards {
+    display: block;
+
+    .cards__item {
+      margin: 50px;
+      .cards__image {
+        margin: 0 auto;
+      }
+    }
+  }
+
+
+
+// portfolio section
+  .gallery {
+  }
+
+// partners links section
+  .partners {
+    .partners__items {
+      display: block;
+      .partners__item {
+        margin: 0 auto;
+        padding: 25px;
+      }
+    }
+  }
+  
+// contact form section
+  .contact-form {
+    margin-top: 5px;
+    .contact-form__form-container_row {
+      display: block;
+      .contact-form_left {
+        .contact-form__name {
+          width: 400px;
+        }
+        .contact-form__email {
+          width: 400px;
+        }
+        .contact-form__subject {
+          width: 400px;
+        }
+      }
+      .contact-form_right {
+        .contact-form__message {
+          width: 400px;
+        }
+      }
+    }
+    .contact-form__form-container_column {
+      .contact-form__bottom {
+        .contact-form__submit {
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 450px) {
+  .footer {
+    .footer__content {
+      display: block;
+    }
+  }
+
+.section__header {
+  padding: 0;
+}
+
+// team section
+.cards {
+  display: block;
+
+  .cards__item {
+    margin: 50px;
+    .cards__image {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+    }
+  }
+}
+
+// contact form section
+  .contact-form {
+    margin-top: 20px;
+    .contact-form__form-container_row {
+      display: block;
+      .contact-form_left {
+        .contact-form__name {
+          width: 290px;
+          margin: 15px 0;
+        }
+        .contact-form__email {
+          width: 290px;
+          margin: 15px 0;
+        }
+        .contact-form__subject {
+          width: 290px;
+          margin: 15px 0;
+        }
+      }
+      .contact-form_right {
+        .contact-form__message {
+          width: 290px;
+          margin: 15px 0;
+        }
+      }
+    }
+    .contact-form__form-container_column {
+      .contact-form__bottom {
+        .contact-form__submit {
+        }
+      }
+    }
+  }
+}
+  
