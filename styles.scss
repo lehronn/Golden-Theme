@@ -22,12 +22,12 @@ body {
 }
 
 .container_fluid {
-  width: 1400px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
 .container {
-  width: 940px;
+  max-width: 940px;
   margin: 0 auto;
 }
 
@@ -70,15 +70,11 @@ body {
 .overlay {
   position: absolute;
   top: 0;
-  width: 1400px;
+  max-width: 1400px;
   height: 700px;
   background: $semi-dark;
   opacity: 0.3;
   transition: 0.5s opacity ease-in-out;
-}
-
-.overlay:hover {
-  opacity: 0;
 }
 
 .header {
@@ -198,7 +194,8 @@ body {
 }
 // sections, main content
 
-.main {}
+.main {
+}
 
 .section {
   padding: 35px 0;
