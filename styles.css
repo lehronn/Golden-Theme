@@ -158,6 +158,7 @@ body {
   float: left;
   position: absolute;
   right: 5%;
+  transition: none;
 }
 
 .menu .menu__item {
@@ -540,6 +541,22 @@ body {
 @media screen and (min-width: 991px) {
   .menu-hamburger {
     display: none;
+    padding: 0;
+  }
+  .drop-menu {
+    background: #212121;
+    width: 100vw;
+    position: fixed;
+    top: -70px;
+    left: 0;
+    height: 70px;
+    margin: 0;
+    line-height: 70px;
+    z-index: 10;
+  }
+  .drop-menu_active {
+    top: 0;
+    transition: all 0.5s ease-in-out;
   }
 }
 
