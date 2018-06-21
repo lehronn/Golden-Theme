@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400i,700|Roboto:300,400&amp;subset=latin-ext" rel="stylesheet">
   <link rel="Stylesheet" type="text/css" href="styles.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body>
@@ -258,7 +259,7 @@
         <span class="section__subheader">Proin iaculis purus consequat sem cure.</span>
       </div>
 
-      <div class="contact-form">
+      <form class="contact-form">
         <div class="contact-form__form-container_row">
           <div class="contact-form_left">
               <input class="contact-form__name" value="YOUR NAME"></input>
@@ -275,8 +276,26 @@
                 Send message
               </button>
             </div>
+            <div class="custom-select" style="width:200px;">
+            <select class="form__select_options" id="form__select_options">
+              <option value="prices">Show prices</option>
+              <option value="selects">Show other selects</option>
+              <option value="others">Other option</option>
+            </select>
+            <select class="form__select_topics" id="form__select_topics">
+              <option value="0">Contact</option>
+              <option value="1">Job Offers</option>
+              <option value="2">Other topics</option>
+            </select>
+            <select class="form__select_lorem" id="form__select_lorem">
+              <option value="1">Lorem</option>
+              <option value="2">Dolor</option>
+              <option value="3">Ipsum</option>
+            </select>
+            </div>
         </div>
-      </div>
+        <div class="g-recaptcha" data-sitekey="6LfDLWAUAAAAAD1-mwfUrCOhBwDxgWoPXY8YC2nB"></div>
+      </form>
     </section>
   </div>
 

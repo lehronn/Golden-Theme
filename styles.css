@@ -538,6 +538,14 @@ body {
   margin-top: 10px;
 }
 
+.form__select_topics {
+  display: none;
+}
+
+.form__select_lorem {
+  display: none;
+}
+
 @media screen and (min-width: 991px) {
   .menu-hamburger {
     display: none;

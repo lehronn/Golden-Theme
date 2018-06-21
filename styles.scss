@@ -573,6 +573,14 @@ body {
   }
 }
 
+.form__select_topics {
+  display: none;
+}
+
+.form__select_lorem {
+  display: none;
+}
+
 // imports
 
 @import 'mqueries';

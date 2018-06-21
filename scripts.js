@@ -8,10 +8,14 @@ let viewportWidth = window.innerWidth;
 let menu = document.getElementById('menu');
 let hamburger_button = document.getElementById('menu-hamburger');
 
+let form__select_options = document.getElementById("form__select_options");
+let form__select_topics = document.getElementById("form__select_topics");
+let form__select_lorem = document.getElementById("form__select_lorem");
+
 // scroll height spy for toggle menu
 window.addEventListener('scroll', function() {
     let scroll_level = window.scrollY; //watch scroll level on scroll event.
-    
+
     // when You scroll 100pxs menu is dropped to top:-70px
     if (scroll_level >= 100) {
         menu.classList.add('drop-menu');
@@ -53,4 +57,18 @@ hamburger_button.addEventListener('click', function() {
         menu.classList.add('menu_active');
     }
 });
+
+console.log(form__select_options.options[form__select_options.selectedIndex].value);
+
+// form selects
+form__select_options.addEventListener('click', function() {
+    if (form__select_options.options[form__select_options.selectedIndex].value == 'selects') {
+        form__select_topics.style.display = "block";
+        form__select_lorem.style.display = "block";
+    }
+    if (form__select_options.options[form__select_options.selectedIndex].value != 'selects') {
+    form__select_topics.style.display = "none";
+    form__select_lorem.style.display = "none";
+}
+})
 
