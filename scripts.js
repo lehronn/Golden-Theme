@@ -24,6 +24,49 @@ window.addEventListener('scroll', function() {
   }
 });
 
+//scroll spy with activating links in dropped menu
+let section = document.querySelectorAll(".section");
+let sections = {};
+let i = 0;
+
+//insert all section in DOM to sections
+Array.prototype.forEach.call(section, function(e) {
+  sections[e.id] = e.offsetTop;
+});
+
+window.onscroll = function () {
+  let scroll_level = document.documentElement.scrollTop || document.body.scrollTop;
+
+  let scroll_limit = Math.max( document.body.scrollHeight, document.body.offsetHeight, 
+                   document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
+
+  let last_section_level = scroll_limit - (scroll_limit * 0.2);
+  let menu__link_last = document.getElementById('menu__link_last');
+
+
+  for (i in sections) {
+    // console.dir(sections);
+    if (sections[i] <= scroll_level) {
+      // console.dir(document.querySelector('.menu__link_active'));
+      // console.dir(document.querySelector('a[href*=' + i + ']'));
+
+      document.querySelector('.menu__link_active').setAttribute('class', 'menu__link');
+      document.querySelector('a[href*=' + i + ']').setAttribute('class', 'menu__link_active menu__link');
+
+      console.log('last_section_level:' + last_section_level);
+      console.log('scroll_level: ' + scroll_level);
+      if (scroll_level > last_section_level ) //jak obliczyć te 5000? 90% z limit_scroll
+    {
+      console.log('true!');
+      menu__link_last.classList.add('menu__link_active');
+    } else {
+      menu__link_last.classList.remove('menu__link_active');
+    }
+
+    }
+  }
+}
+
 // hamburger icon toggle
 let hamburger_button = document.getElementById('menu-hamburger');
 let menu = document.getElementById('menu');

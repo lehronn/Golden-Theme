@@ -190,6 +190,10 @@ body {
     }
   }
 }
+
+.menu .menu__link_active {
+  color: $attent;
+}
 // sections, main content
 
 .main {}
@@ -486,7 +490,11 @@ body {
 // partners section
 
 .partners {
+  height: 200px;
   background: $light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .partners__items {
     display: flex;

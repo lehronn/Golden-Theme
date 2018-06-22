@@ -179,6 +179,10 @@ body {
   color: #FDD135;
 }
 
+.menu .menu__link_active {
+  color: #FDD135;
+}
+
 .section {
   padding: 35px 0;
 }
@@ -445,7 +449,11 @@ body {
 }
 
 .partners {
+  height: 200px;
   background: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .partners .partners__items {
