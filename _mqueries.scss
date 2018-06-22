@@ -5,27 +5,26 @@
     display: none;
     padding: 0;
   }
-
   //menu before dropped
-.drop-menu {
-  background: $semi-dark;
-  width: 100vw;
-  position: fixed;
-  top: -70px;
-  left: 0;
-  height: 70px;
-  margin: 0;
-  line-height: 70px;
-  z-index: 10;
-}
 
-// menu after dropped
-.drop-menu_active {
-  top: 0;
-  transition: all 0.5s ease-in-out;
-}
-}
+  .drop-menu {
+    background: $semi-dark;
+    width: 100vw;
+    position: fixed;
+    top: -70px;
+    left: 0;
+    height: 70px;
+    margin: 0;
+    line-height: 70px;
+    z-index: 10;
+  }
+  // menu after dropped
 
+  .drop-menu_active {
+    top: 0;
+    transition: all 0.5s ease-in-out;
+  }
+}
 @media screen and (max-width: 990px) {
   .container_fluid {
     width: 100%;
@@ -34,8 +33,7 @@
   .container {
     width: 100%;
   }
-
-// header section
+  // header section
   .overlay {
     display: none;
   }
@@ -52,39 +50,37 @@
     left: 0;
     background: $semi-dark;
     transition: all 1s ease-in-out;
-  
+
     .menu__item {
       display: block;
       padding: 20px;
     }
-  
-    .menu__link {
-    }
+
+    .menu__link {}
   }
 
   .menu_active {
     top: -41px;
   }
+  // footer
 
-// footer
-.footer {
+  .footer {
+    .footer__content {
+      transform: none;
 
-  .footer__content {
-    transform: none;
-    span {
-      display: block;
-      padding: 20px;
-      margin: 0;
-    }
-    i {
+      span {
+        display: block;
+        padding: 20px;
+        margin: 0;
+      }
 
+      i {}
     }
   }
-}
-
-// services section
+  // services section
   .items {
     display: block;
+
     .section__item {
       .item__desc {
         margin-left: 20%;
@@ -92,11 +88,8 @@
       }
     }
   }
-
-// aboutus section
-  .aboutus {
-
-  }
+  // aboutus section
+  .aboutus {}
 
   .time-line {
     display: flex;
@@ -104,33 +97,39 @@
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: column;
+
     .time-line__item {
       flex: 1;
       margin-top: 210px;
+
       .time-line__content_left {
         position: static;
       }
+
       .time-line__content_right {
         position: static;
       }
     }
+
     .item_first {
       margin-top: 0;
     }
+
     .time-line__gray-line {
       z-index: -1;
     }
+
     .time-line__image {
       margin-top: 210px;
     }
+
     .time-line__item_see-more {
       margin-top: 210px;
-      .time-line__content {
-      }
+
+      .time-line__content {}
     }
   }
-
-// team section
+  // team section
   .section__text {
     margin-left: 10%;
     margin-right: 10%;
@@ -141,61 +140,95 @@
 
     .cards__item {
       margin: 50px;
+
       .cards__image {
         margin: 0 auto;
       }
     }
   }
-
-
-
-// portfolio section
-  .gallery {
-  }
-
-// partners links section
+  // portfolio section
+  .gallery {}
+  // partners links section
   .partners {
     .partners__items {
       display: block;
+
       .partners__item {
         margin: 0 auto;
         padding: 25px;
       }
     }
   }
-  
-// contact form section
+  // prices form section
+
+  .prices-form {
+    margin-top: 5px;
+
+    .prices-form__form-container_row {
+      .prices-form_left {
+        .contact-form__name {
+          width: 400px;
+        }
+
+        .prices-form__email {
+          width: 400px;
+        }
+
+        .prices-form__subject {
+          width: 400px;
+        }
+      }
+
+      .prices-form_right {
+        .prices-form__message {
+          width: 400px;
+        }
+      }
+    }
+  }
+
+  .hello,
+  .pack-desc_full,
+  .pack-desc_medium,
+  .pack-desc_starter,
+  .pricing {
+    padding: 10px 10%;
+  }
+  // contact form section
   .contact-form {
     margin-top: 5px;
+
     .contact-form__form-container_row {
       display: block;
+
       .contact-form_left {
         .contact-form__name {
           width: 400px;
         }
+
         .contact-form__email {
           width: 400px;
         }
+
         .contact-form__subject {
           width: 400px;
         }
       }
+
       .contact-form_right {
         .contact-form__message {
           width: 400px;
         }
       }
     }
+
     .contact-form__form-container_column {
       .contact-form__bottom {
-        .contact-form__submit {
-        }
+        .contact-form__submit {}
       }
     }
   }
-
 }
-
 @media screen and (max-width: 450px) {
   .footer {
     .footer__content {
@@ -203,69 +236,81 @@
     }
   }
 
-.section__header {
-  padding: 0;
-}
+  .section__header {
+    padding: 0;
+  }
+  // aboutus section
 
-// aboutus section
-.time-line {
+  .time-line {
+    .time-line__item {
+      .time-line__content_left {
+        width: 100%;
+        text-align: center;
+      }
 
-  .time-line__item {
-
-    .time-line__content_left {
-      width: 100%;
-      text-align: center;
+      .time-line__content_right {
+        width: 100%;
+        text-align: center;
+      }
     }
-    .time-line__content_right {
-      width: 100%;
-      text-align: center;
-    }
-  }
-  .item_first {
 
-  }
+    .item_first {}
 
-  .time-line__image {
-  }
-  .time-line__item_see-more {
-    .time-line__content {
+    .time-line__image {}
+
+    .time-line__item_see-more {
+      .time-line__content {}
     }
   }
-}
+  // team section
 
-// team section
-.cards {
-  display: block;
+  .cards {
+    display: block;
 
-  .cards__item {
-    margin: 50px;
-    .cards__image {
-      width: 100px;
-      height: 100px;
-      margin: 0 auto;
+    .cards__item {
+      margin: 50px;
+
+      .cards__image {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+      }
     }
   }
-}
+  //pricing form section
 
-// contact form section
+  .form__select_dropmenu {
+    width: 290px;
+    margin: 15px 0;
+  }
+
+  .form__select_packets {
+    width: 290px;
+    display: flex;
+    margin: 15px 0;
+  }
+  // contact form section
   .contact-form {
     margin-top: 20px;
+
     .contact-form__form-container_row {
-      display: block;
       .contact-form_left {
         .contact-form__name {
           width: 290px;
           margin: 15px 0;
         }
+
         .contact-form__email {
           width: 290px;
           margin: 15px 0;
         }
+
         .contact-form__subject {
           width: 290px;
           margin: 15px 0;
         }
       }
+
       .contact-form_right {
         .contact-form__message {
           width: 290px;
@@ -273,12 +318,11 @@
         }
       }
     }
+
     .contact-form__form-container_column {
       .contact-form__bottom {
-        .contact-form__submit {
-        }
+        .contact-form__submit {}
       }
     }
   }
 }
-  

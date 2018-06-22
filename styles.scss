@@ -7,9 +7,7 @@ $gray: #F1F1F1;
 $semi-dark: #212121;
 $semi-dark_transparent: rgba(255,255,255, 0.3);
 $attent: #FDD135;
-
 // styles
-
 * {
   outline: 0 solid red;
 }
@@ -44,16 +42,17 @@ body {
 }
 
 .button:before {
-  content:'';
+  content: '';
   position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 0px;
+  top: 0;
+  left: 0;
+  width: 0;
   height: 67px;
   background: $semi-dark_transparent;
   border-radius: 5px;
   transition: all 0.5s ease-in-out;
 }
+
 .button:hover:before {
   width: 100%;
   filter: blur(8px);
@@ -146,30 +145,27 @@ body {
   margin: 8px auto;
   transition: all 0.3s ease-in-out;
   margin-right: 0;
-  
 }
-
 // hamburger button animation
-
-#menu-hamburger.hamburger_active .hamburger__line:nth-child(2){
+#menu-hamburger.hamburger_active .hamburger__line:nth-child(2) {
   opacity: 0;
 }
 
-#menu-hamburger.hamburger_active .hamburger__line:nth-child(1){
+#menu-hamburger.hamburger_active .hamburger__line:nth-child(1) {
   -webkit-transform: translateY(13px) rotate(45deg);
   -ms-transform: translateY(13px) rotate(45deg);
   -o-transform: translateY(13px) rotate(45deg);
   transform: translateY(13px) rotate(45deg);
 }
 
-#menu-hamburger.hamburger_active .hamburger__line:nth-child(3){
+#menu-hamburger.hamburger_active .hamburger__line:nth-child(3) {
   -webkit-transform: translateY(-13px) rotate(-45deg);
   -ms-transform: translateY(-13px) rotate(-45deg);
   -o-transform: translateY(-13px) rotate(-45deg);
   transform: translateY(-13px) rotate(-45deg);
 }
-
 // menu
+
 .menu {
   float: left;
   position: absolute;
@@ -188,15 +184,15 @@ body {
     color: $light;
     text-decoration: none;
     transition: color 0.5s ease-in-out;
+
     &:hover {
       color: $attent;
     }
   }
 }
-
 // sections, main content
-.main {
-}
+
+.main {}
 
 .section {
   padding: 35px 0;
@@ -210,7 +206,7 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
-  padding: 0 25px 25px 25px;
+  padding: 0 25px 25px;
 }
 
 .section__subheader {
@@ -243,15 +239,18 @@ body {
   font-family: $body-font;
   font-weight: 300;
   font-size: 0.9rem;
+
   .footer__content {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+
     span {
       display: block;
       margin: 15px;
     }
+
     .footer__icons {
       i {
         border: 2px $semi-dark solid;
@@ -288,9 +287,7 @@ body {
   color: $semi-dark;
   background: $attent;
 }
-
 // services section
-
 .services {
   background: $light;
   min-height: 430px;
@@ -300,6 +297,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
   .section__item {
     text-align: center;
   }
@@ -315,9 +313,7 @@ body {
   margin: 30px auto;
   transition: 0.5s transform ease-in-out;
 }
-
 // portfolio section
-
 .portfolio {
   background: $blue-light;
 }
@@ -329,24 +325,29 @@ body {
   align-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
+
   .gallery__item {
     flex: 1 0 20%;
     margin: 11px;
     text-align: center;
     transition: all 1s ease-in-out;
     cursor: pointer;
+
     .item__image {
       flex-basis: 290px;
       width: 290px;
       height: 300px;
       margin: auto;
     }
+
     .item__content {
       flex-basis: 290px;
       width: 290px;
       padding: 10px 0;
       margin: auto;
+
       .item__title {}
+
       .item__desc {}
     }
   }
@@ -355,10 +356,7 @@ body {
 .gallery__item:hover {
   filter: sepia(80%);
 }
-
-
 // about us section
-
 .aboutus {
   background: $light;
 }
@@ -366,10 +364,12 @@ body {
 .time-line {
   position: relative;
   padding: 35px;
+
   .time-line__item {
     margin: 0 auto;
     height: 300px;
     transition: all 1s ease-in-out;
+
     .time-line__content_left {
       width: 300px;
       position: relative;
@@ -392,6 +392,7 @@ body {
     left: 50%;
     top: 200px;
   }
+
   .time-line__date {}
 
   .time-line__title {}
@@ -408,6 +409,7 @@ body {
     margin: 0 auto;
     transition: all 1s ease-in-out;
   }
+
   .time-line__item_see-more {
     background: $attent;
     width: 170px;
@@ -415,6 +417,7 @@ body {
     border: 5px $gray solid;
     border-radius: 50%;
     margin: 0 auto;
+
     .time-line__content {
       color: $light;
       font-family: $body-font;
@@ -458,14 +461,12 @@ body {
     transition: all 1s ease-in-out;
   }
 
-  .cards__name {
-  }
+  .cards__name {}
 
-  .cards__position {
-  }
+  .cards__position {}
 
   .cards__icons {
-    i{
+    i {
       border: 2px $semi-dark solid;
       border-radius: 50%;
       line-height: 1rem;
@@ -486,10 +487,12 @@ body {
 
 .partners {
   background: $light;
+
   .partners__items {
     display: flex;
     align-items: center;
     justify-content: center;
+
     .partners__item {
       width: 190px;
       height: 44px;
@@ -501,10 +504,123 @@ body {
 .partners__item:hover {
   filter: sepia(50%);
 }
-// contact section
+// prices section
+.prices {
+  height: 400px;
+  background: $semi-dark;
+  color: $light;
+}
 
+.prices-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .prices-form__form-container_row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+}
+
+.prices-form__form-container_column {
+  display: flex;
+  flex-direction: column;
+
+  .prices-form_bottom {
+    .prices-form__submit {}
+  }
+}
+
+.prices-select {
+  margin: 15px;
+  height: 35px;
+  width: 455px;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px;
+  font-family: $body-font;
+  text-align: center;
+}
+
+.form__select_dropmenu {
+  text-align: center;
+  display: flex;
+}
+
+.form__select_packets {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.prices-form__content-container {
+  position: relative;
+  width: 100%;
+}
+
+.hello {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.hello_active {
+  opacity: 1;
+}
+
+.pricing {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.pricing_active {
+  opacity: 1;
+}
+
+.packets_active {
+  opacity: 1;
+}
+
+.pack-desc_starter {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.starter_active {
+  opacity: 1;
+}
+
+.pack-desc_medium {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.medium_active {
+  opacity: 1;
+}
+
+.pack-desc_full {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.full_active {
+  opacity: 1;
+}
+// contact section
 .contact {
-  height: 620px;
   background: url("./assets/contact_bg.jpg") no-repeat 50% 10% $semi-dark;
 }
 
@@ -515,12 +631,15 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: column;
+
   .contact-form__form-container_row {
     display: flex;
     flex-direction: row;
+
     .contact-form_left {
       display: flex;
       flex-direction: column;
+
       .contact-form__name {
         margin: 15px;
         height: 35px;
@@ -530,6 +649,7 @@ body {
         padding: 5px;
         font-family: $body-font;
       }
+
       .contact-form__email {
         margin: 15px;
         height: 35px;
@@ -538,6 +658,7 @@ body {
         border-radius: 5px;
         padding: 5px;
       }
+
       .contact-form__subject {
         margin: 15px;
         height: 35px;
@@ -547,9 +668,11 @@ body {
         padding: 5px;
       }
     }
+
     .contact-form_right {
       display: flex;
       flex-direction: column;
+
       .contact-form__message {
         flex-direction: column;
         margin: 15px;
@@ -562,25 +685,16 @@ body {
       }
     }
   }
+
   .contact-form__form-container_column {
     display: flex;
     flex-direction: column;
     margin-top: 10px;
+
     .contact-form_bottom {
-      .contact-form__submit {
-      }
+      .contact-form__submit {}
     }
   }
 }
-
-.form__select_topics {
-  display: none;
-}
-
-.form__select_lorem {
-  display: none;
-}
-
 // imports
-
 @import 'mqueries';
