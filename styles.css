@@ -1019,4 +1019,13 @@ body {
     margin: 15px 0;
   }
 }
+
+@media all and (min--moz-device-pixel-ratio: 0) and (max-width: 990px) {
+  .time-line .time-line__item_see-more {
+    margin-top: 0;
+  }
+  .time-line .time-line__item {
+    margin-top: 0;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
