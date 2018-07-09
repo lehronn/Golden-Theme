@@ -37,10 +37,11 @@ Array.prototype.forEach.call(section, function(e) {
 window.onscroll = function () {
   let scroll_level = document.documentElement.scrollTop || document.body.scrollTop;
 
-  let scroll_limit = Math.max( document.body.scrollHeight, document.body.offsetHeight, 
-                   document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
+  let scroll_limit = Math.max( document.body.scrollHeight,
+                  document.body.offsetHeight, 
+                  document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
 
-  let last_section_level = scroll_limit - (scroll_limit * 0.2);
+  let last_section_level = scroll_limit - (scroll_limit * 0.18);
   let menu__link_last = document.getElementById('menu__link_last');
 
 

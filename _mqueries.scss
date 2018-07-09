@@ -46,7 +46,7 @@
     z-index: 2;
     float: none;
     position: relative;
-    top: -350px;
+    top: -540px;
     left: 0;
     background: $semi-dark;
     transition: all 1s ease-in-out;
@@ -161,6 +161,10 @@
   }
   // prices form section
 
+  .prices {
+    padding: 100px 0 200px 0;
+  }
+
   .prices-form {
     margin-top: 5px;
 
@@ -239,6 +243,14 @@
   .section__header {
     padding: 0;
   }
+
+
+  // prices section
+
+  .prices {
+    padding: 100px 0 200px 0;
+  }
+
   // aboutus section
 
   .time-line {

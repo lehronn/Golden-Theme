@@ -490,7 +490,6 @@ body {
 // partners section
 
 .partners {
-  height: 200px;
   background: $light;
   display: flex;
   align-items: center;
@@ -561,6 +560,7 @@ body {
 
 .form__select_packets {
   opacity: 0;
+  visibility: hidden;
   transition: all 1s ease-in-out;
 }
 
@@ -593,6 +593,7 @@ body {
 
 .packets_active {
   opacity: 1;
+  visibility: visible;
 }
 
 .pack-desc_starter {
