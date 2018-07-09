@@ -68,6 +68,17 @@ window.onscroll = function () {
   }
 }
 
+//local smooth scrolling
+let menu__links = document.querySelectorAll(".menu__link");
+console.dir(menu__links);
+
+for (let i = 0; i < menu__links.length; i +=1) {
+  menu__links[i].addEventListener('click', function(event) {
+    event.preventDefault();
+    document.querySelector(menu__links[i].hash).scrollIntoView({behavior: 'smooth'});
+});
+}
+
 // hamburger icon toggle
 let hamburger_button = document.getElementById('menu-hamburger');
 let menu = document.getElementById('menu');
